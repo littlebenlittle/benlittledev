@@ -1,0 +1,57 @@
+==================================================================
+https://keybase.io/benlittle
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://benlittle.dev
+  * I am benlittle (https://keybase.io/benlittle) on keybase.
+  * I have a public key ASDvwx6QcwEvwa9pIz9QvOzlTVXZBI_54ebZzh8-bOlx0go
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01208c022c5e33247fc2b95ae90b1dff394499ed9c4a5d804beb66f7895ec3800f940a",
+      "host": "keybase.io",
+      "kid": "0120efc31e9073012fc1af69233f50bcece54d55d9048ff9e1e6d9ce1f3e6ce971d20a",
+      "uid": "bf7b7fc59a615be6b38055a4ace96e19",
+      "username": "benlittle"
+    },
+    "merkle_root": {
+      "ctime": 1599237424,
+      "hash": "450a8ac904307adaf8b2f270f75de2546139107525115fad41e5a5b78d7b4d0b8d53e8bdb582e0a590e7da9ebfaf2f351371c71d1e42bc94075004760f589a65",
+      "hash_meta": "08e6cec9b27894afe16839c43b89762b46233d6d578f26839128c762d1fbba9f",
+      "seqno": 17475953
+    },
+    "service": {
+      "entropy": "pOzcrEKJU2tcf4IfykRfgmg2",
+      "hostname": "benlittle.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.1"
+  },
+  "ctime": 1599237441,
+  "expire_in": 504576000,
+  "prev": "6f78c5a4ac997b5d2118cf8817d3539160e491381557bfbf6b243bb1b9e28864",
+  "seqno": 16,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg78MekHMBL8GvaSM/ULzs5U1V2QSP+eHm2c4fPmzpcdIKp3BheWxvYWTESpcCEMQgb3jFpKyZe10hGM+IF9NTkWDkkTgVV7+/ayQ7sbniiGTEIDilJC6QRAQY4R3ghoeSFHoyaXI3vcuaZZB2cBPACzajAgHCo3NpZ8RABBDmOI+kaQ5LPXudFL1JLby57jNLQEbUBq/gNmolLprJ22XM+pLoHy2E6nns1Dr+aVB/5Qhxy83sJFidzkvyDahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEINPTO5fFvwlYn/TvdzV24jmzLEMpiWYeBJ6mrl04b7FUo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/benlittle
+
+==================================================================
+
