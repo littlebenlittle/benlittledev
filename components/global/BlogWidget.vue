@@ -16,9 +16,8 @@
 					margin="2"
 					padding="2"
 					:title="post.title"
-					:id="post.id"
 					:date="post.date"
-					:selected="selectedPost.id == post.id"
+					:selected="false"
 					@select="selectPost(post.id)"
 				/>
 			</CFlex>
@@ -31,20 +30,10 @@
 				v-if="posts.length > postsPerPage"
 			/>
 		</CFlex>
-		<CBox
-			padding="4"
-			width="100vw"
-			maxWidth="800px"
-			height="1000px"
-			overflow="scroll"
-		>
-			<nuxt-content :document="selectedPost" />
-		</CBox>
 	</CFlex>
 </template>
 
 <script>
-import moment from 'moment'
 import {
 	CBox, CFlex,
 } from '@chakra-ui/vue'
@@ -63,6 +52,10 @@ export default {
 	props: {
 		posts: {
 			type: Array,
+		},
+		shownPostId: {
+			default: "",
+			type: String,
 		},
 		postsPerPage: {
 			default: 4,
@@ -87,17 +80,8 @@ export default {
 	},
 
 	methods: {
-		async selectPost(postId) {
-			let post = await this.$content('blog')
-				.where({ id: postId })
-				.fetch()
-				.catch( err => {
-					error({ statusCode: 404, message: 'Post not found' })
-				})
-				.then( rep => {
-					return rep[0]
-				})
-			this.selectedPost = post
+		selectPost(postId) {
+			this.$router.push({path: '/blog/' + postId})
 		},
 		nextPage() {
 			this.currentPage = Math.min(this.pageMax, this.currentPage + 1)
@@ -127,14 +111,14 @@ export default {
 <style>
 .nuxt-content p {
 	font-size: 1.25rem;
-	margin-bottom: 0.75rem;
-	text-indent: 2.5rem;
+	margin: 1.0rem 0.75rem 0 0.75rem;
+	/*text-indent: 2.5rem;*/
 }
 
 .nuxt-content ol, ul {
 	margin: 0.25rem 0.75rem 0.25rem 1.75rem;
 	width: 90%;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	display: flex;
 	flex-direction: column;
 	align-content: center;
@@ -146,7 +130,7 @@ export default {
 }
 
 .nuxt-content code {
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	border-radius: 7px;
 	background-color: #f2f2f2;
 }
@@ -175,6 +159,7 @@ export default {
 }
 
 .nuxt-content h1 {
+    margin-top: 1.5rem;
 	font-size: 2.5rem;
 }
 
@@ -184,16 +169,21 @@ export default {
 }
 
 .nuxt-content h3 {
-	font-size: 1.2rem;
+    margin-top: 1.5rem;
+	font-size: 1.75rem;
+	color: gray;
 }
 
 .nuxt-content h4 {
+    margin-top: 1.5rem;
 	font-size: 1.0rem;
 	color: grey;
 }
 
 .nuxt-content h5 {
+    margin-top: 1.5rem;
 	font-size: 1.0rem;
+	color: grey;
 }
 
 </style>

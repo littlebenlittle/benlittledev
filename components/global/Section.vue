@@ -17,24 +17,8 @@
 			</CHeading>
 		</CBox>
 
-		<CBox
-			mb="4"
-		>
-			<CButton
-				@click="$emit(showWidget ? 'hide' : 'show')"
-			>
-				<CText>
-					{{ showWidget ? "Hide" : "Show" }}
-				</CText>
-			</CButton>
-		</CBox>
-
 		<CBox>
-			<CCollapse
-                :is-open="showWidget"
-            >
-				<slot />
-			</CCollapse>
+			<slot />
 		</CBox>
 
 	</CFlex>
