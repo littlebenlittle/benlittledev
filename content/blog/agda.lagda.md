@@ -1,5 +1,5 @@
 ---
-title: 🤖 Dependent Type Theory and Agda
+title: Dependent Type Theory and Agda
 date: 2020-10-28
 id: agda
 status: published
@@ -10,7 +10,7 @@ readtime: 5m
 module _ where
 ```
 
-*This line tells Agda to infer the module name from the filename. Read more on literate Agda [here](https://agda.readthedocs.io/en/latest/tools/literate-programming.html#literate-markdown)*
+*Read more on literate Agda [here](https://agda.readthedocs.io/en/latest/tools/literate-programming.html#literate-markdown)*
 
 # Dependent Type Theory and Agda
 
